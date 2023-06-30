@@ -20,10 +20,25 @@ In our work, we use computer vision and machine learning technology to analyze f
 ![arch](fig/ME_pipe.png)
 
 It contains 4 steps: Pre-processing, Micro-expression Spotting, Feature extraction, and Classification.
-(1)First, face frames are extracted from the video by detection and cropping.  
+(1) First, face frames are extracted from the video by detection and cropping.  
 
+![arch](fig/step1.png)
 
-Second, we use a spotting model to locate the Onset, apex, and Offset of each micro-expression movements in the videos. Third, extract discriminative facial subtle muscle movement change feature from each spotted micro-expression subvideo. Last, the final representation is fed for classification.
+(2) Second, locate the Onset, apex, and Offset of each micro-expression movements in the videos. 
+![arch](fig/step1.png)
 
+onset: the first frame at which a Micro-Expression (ME) starts. i.e., changing from the baseline, which is usually the neutral facial expression.
+apex: the frame at which the highest intensity of the facial expression is reached.
+offset: the last frame at which a ME ends, i.e., returning back to the neutral facial expression.
 ![arch](fig/ME_apex.png)
+
+![arch](fig/step2.png)
+
+(3) Third, extract discriminative facial subtle muscle movement change feature from each spotted micro-expression subvideo. 
+
+
+
+(4) Last, the final representation is fed for classification.
+
+
 
