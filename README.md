@@ -1,29 +1,29 @@
 # micro_expression_autism
-This is the official implementation of our work about Face Micro-Expression Analysis on ADOS Videos for autism diagnosis.
-This is an undergoing work.
-Key codes and materials will be released after finsihed.
+This is the implementation of one of my work on Face Micro-Expression Analysis on ADOS Videos for autism diagnosis.
+This work is an undergoing work. The key codes and materials will be released after work is done. stay tuned!
 
 
 # introduction
-Most previous study on facial expression analysis for ASD mainly focus on macro-expression analysis. However, micro-expression can reflect more true feelings of individuals. In our work, we use computer vision and machine learning technology to analyze facial micro-expressions of participants 
-in hour-long ADOS video sequences for the diagnosis of ASD.
+Facial expression analysis has attracted great interest over the past years. It can be used in many real-life applications, like digital health, human machine interaction, behavior analysis, video communication, etc.
 
+People with autism spectrum disorder (ASD) show socio-emotion interaction difficulties in communication disorder, emotional dysregulation with rigid and repetitive behaviors. These difficulties cause many problems related to performance of expressive language, social and emotional adaptive skills. People with autism usually do not show their emotions in a way that normal people would be able to recognize and understand. Either they do not respond emotionally, or their emotional responses might sometimes seem over-reaction.
 
+Most previous study on facial emotion analysis for ASD mainly focus on macro-expression analysis, which is easily noticed and voluntary with long duration, large muscle variation. However, micro-expression, which is easy to ignore, involuntary, uncontrollable, and spontaneous with short duration and slight variation, often reflects the true feelings that a person try to conceal, hide, mask or suppress, especially important in high-risk situations, like clinical diagnosis, lie detection, and criminal investigation. 
 ![arch](fig/diff.png)
-![arch](fig/ME_samples.png)
 
-Compared to Macro-expression, Micro-expressions are involuntary and transient facial expressions that can reflect the true emotions that a person try to suppress, hide, mask, or conceal, therefore, it provides more important information than macro-expression, especially in high-risk situations, like lie detection, criminal investigation, clinical diagnosis.
+In our work, we use computer vision and machine learning technology to analyze facial micro-expressions of participants in hour-long ADOS video sequences for the diagnosis of ASD.
+![arch](fig/ME_samples.png)
 
 
 # pipeline
 
 ![arch](fig/ME_pipe.png)
 
-It contains 4 parts: Pre-processing, Micro-expression Spotting, Feature extraction, and Classification.
-First, face frames are extracted from the video by detection and cropping. 
-Second, we use a spotting model to locate the Onset, apex, and Offset of each micro-expression movements.
-Third, extract discriminative feature from each spotted segments.
-Last, the final representation is fed for classification.
+It contains 4 steps: Pre-processing, Micro-expression Spotting, Feature extraction, and Classification.
+(1)First, face frames are extracted from the video by detection and cropping.  
+
+
+Second, we use a spotting model to locate the Onset, apex, and Offset of each micro-expression movements in the videos. Third, extract discriminative facial subtle muscle movement change feature from each spotted micro-expression subvideo. Last, the final representation is fed for classification.
 
 ![arch](fig/ME_apex.png)
 
