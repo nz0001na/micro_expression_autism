@@ -38,7 +38,7 @@ offset: the last frame at which a ME ends, i.e., returning back to the neutral f
 
 (3) Third, extract discriminative facial subtle muscle movement change feature from each spotted micro-expression subvideo. 
 
-we use a BERT-based Auto Encoder model to automatically capture these micro-changes of facial texture in an unsupervised manner.
+we use a BERT-based Auto Encoder as a base model (https://github.com/uark-cviu/Micron-BERT) to capture these micro-changes of facial texture in an unsupervised manner.
 
 It consists of five main blocks. 
 
