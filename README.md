@@ -61,7 +61,7 @@ It can be a discriminative feature of micro-expression.
 (4) Last, the final representation is fed into SVM for final classification.
 
 ### Link: 
-More details can be referred to my thesis. 
+More details can be referred to my thesis(Section 4.4). 
 [[PDF]](https://researchrepository.wvu.edu/etd/11861/)
 
 
