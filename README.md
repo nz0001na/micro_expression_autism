@@ -2,7 +2,6 @@
 This is the implementation of one of my work on Face Micro-Expression Analysis on ADOS Videos for autism diagnosis.
 This work is an undergoing work. The key codes and materials will be released after work is done. stay tuned!
 
-
 # introduction
 Facial expression analysis has attracted great interest over the past years. It can be used in many real-life applications, like digital health, human machine interaction, behavior analysis, video communication, etc.
 
@@ -61,6 +60,8 @@ It can be a discriminative feature of micro-expression.
 
 (4) Last, the final representation is fed into SVM for final classification.
 
-
+### Link: 
+More details can be referred to my thesis. 
+[[PDF]](https://researchrepository.wvu.edu/etd/11861/)
 
 
