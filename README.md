@@ -1,4 +1,4 @@
-# micro_expression_autism
+# Micro_expression_autism
 This is the implementation of one of my work on Face Micro-Expression Analysis on ADOS Videos for autism diagnosis.
 This work is an undergoing work. The key codes and materials will be released after work is done. stay tuned!
 
