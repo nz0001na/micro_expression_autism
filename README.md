@@ -15,55 +15,48 @@ In our work, we use computer vision and machine learning technology to analyze f
 
 # Data
 ADOS means Autism Diagnostic Observation Schedule.
+
 It is a structured but natural discussion between the highly trained interviewer and participant. 
-The schedule contains 15 standardized activities.
-For each activity, the interviewer gives the question, and the participants gives their response.
-The response of participants to each activity is inspected by the interviewers.
-Different scenes are designed for the analysis of different aspects of autism
-This schedule can capture various information, like
-Hand gesture
-Face emotions
-Body behavior
-Speech traits
-(1) Construction task
-The participant is asked to use puzzle pieces to complete a diagram 
-and is instructed to request more pieces when needed
-(2) Telling a story from a book
-The book has very few words;
-The participant is asked to interpret the story from the visual cues, including reading emotions on the faces of the people in the story
-(3) Description of a Picture;
-A picture is shown.
-The participant is asked to describe this picture.
-The picture provides opportunities for interaction with the interviewer.
 
+The schedule contains 15 standardized activities: 
 
-(4) Conversation and Reporting: 
-Based largely on the picture the participant saw in (3), the participant is asked to talk more.
+(1) Construction task: The participant is asked to use puzzle pieces to complete a diagram and is instructed to request more pieces when needed.
+
+(2) Telling a story from a book: The book has very few words; The participant is asked to interpret the story from the visual cues, including reading emotions on the faces of the people in the story.
+
+(3) Description of a Picture: A picture is shown. The participant is asked to describe this picture. The picture provides opportunities for interaction with the interviewer.
+
+(4) Conversation and Reporting: Based largely on the picture the participant saw in (3), the participant is asked to talk more.
 Scenes 5-7 focus more on conversation.
 Scene 5 talks about work or school lives of the participant.
 Scene 6 talks about Social Difficulties and Annoyance of the participant.
-Scene 7 talks about the events/objects that elicit different emotions in the participant and asks  the participant to describe their feelings
-(8) Demonstration Task
-The participant is asked to show and tell the interviewer how to do a typical procedure, such as brushing their teeth.
-In scene (9) Cartoons
-First, a series of cards showing cartoon characters are presented to the participant.
-These cards tell a story.
-Then the participant stands to re-tell the story.
-Their use of the gestures, emotions, and reference to relationships is evaluated finally.
-In scene (10) Break,
-The participant is given a few items (like magazines, toys, color pens and papers);
-And the interviewer observes their behavior during this free time;
+Scene 7 talks about the events/objects that elicit different emotions in the participant and asks  the participant to describe their feelings.
+
+(8) Demonstration Task: The participant is asked to show and tell the interviewer how to do a typical procedure, such as brushing their teeth.
+
+In scene (9) Cartoons, First, a series of cards showing cartoon characters are presented to the participant. These cards tell a story. Then the participant stands to re-tell the story. Their use of the gestures, emotions, and reference to relationships is evaluated finally.
+
+In scene (10) Break, The participant is given a few items (like magazines, toys, color pens and papers); And the interviewer observes their behavior during this free time.
+
 Scene 11 to 14 mainly focus more on conversation.
-(11) Daily Living:
-Scene 11 talks about their current living situation
-(12) Friends, Relationships, and Marriage: 
-(13) Loneliness: 
-(14) Plans and Hopes
-(15) Creating a Story: 
-The participant is asked to use their imagination to create a novel story using some objects. 
+(11) Daily Living: Scene 11 talks about their current living situation. (12) Friends, Relationships, and Marriage. (13) Loneliness. (14) Plans and Hopes.
 
+(15) Creating a Story: The participant is asked to use their imagination to create a novel story using some objects. 
 
+![arch](fig/data.png)
 
+For each activity, the interviewer gives the question, and the participants gives their response.
+The response of participants to each activity is inspected by the interviewers.
+Different scenes are designed for the analysis of different aspects of autism. 
+This schedule can capture various information, like:
+Hand gesture,
+Face emotions,
+Body behavior,
+Speech traits,
+gaze, etc.
+
+# Data Augmentation
+To get a more balance dataset, we make several data augmentation strategies on frames to enlarge data size, such as horizontal flipping,  brightness changing, histogram equalization, etc.
 
 
 # Pipeline
