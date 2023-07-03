@@ -114,4 +114,12 @@ It can be a discriminative representation of a micro-expression movement.
 More details can be referred to my thesis (Section 4.4). 
 [[PDF]](https://researchrepository.wvu.edu/etd/11861/)
 
+# Content
+This repository contains the implementation of:
+* Video pre-processing
+* Optical flow calculation
+* Micro-expression spotting
+* Feature extraction using Autoencoder
+* classifiaction using SVM (10-fold cross validation)
 
+  
