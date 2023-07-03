@@ -120,6 +120,6 @@ This repository contains the implementation of:
 * Optical flow calculation
 * Micro-expression spotting
 * Feature extraction using Autoencoder
-* classifiaction using SVM (10-fold cross validation)
+* Classifiaction using SVM (10-fold cross validation)
 
   
