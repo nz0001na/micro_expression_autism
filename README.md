@@ -2,7 +2,7 @@
 This is the implementation of one of my work on Face Micro-Expression Analysis on ADOS Videos for autism diagnosis.
 This work is an undergoing work. The key codes and materials will be released after work is done. stay tuned!
 
-# introduction
+# Introduction
 Facial expression analysis has attracted great interest over the past years. It can be used in many real-life applications, like digital health, human machine interaction, behavior analysis, video communication, etc.
 
 People with autism spectrum disorder (ASD) show socio-emotion interaction difficulties in communication disorder, emotional dysregulation with rigid and repetitive behaviors. These difficulties cause many problems related to performance of expressive language, social and emotional adaptive skills. People with autism usually do not show their emotions in a way that normal people would be able to recognize and understand. Either they do not respond emotionally, or their emotional responses might sometimes seem over-reaction.
@@ -14,7 +14,7 @@ In our work, we use computer vision and machine learning technology to analyze f
 ![arch](fig/ME_samples.png)
 
 
-# pipeline
+# Pipeline
 
 ![arch](fig/ME_pipe.png)
 
@@ -33,15 +33,20 @@ apex: the frame at which the highest intensity of the facial expression is reach
 
 offset: the last frame at which a ME ends, i.e., returning back to the neutral facial expression.
 
+The spotting model is a shallow optical flow 3-stream CNN model taking different (3) optical flow feature of frames as input. 
+Each stream consisting of a single convolutional layer with 3, 5, and 8 filters respectively, followed by a max-pooling layer to reduce the feature map size. The feature maps from each stream are then stacked channel-wise to combine the features, with another max-pooling layer thereafter. Finally, it flattens out to a 400-node layer, fully connected to a single output score via linear activation. 
+
+It treats the spotting task as a regression problem that predicts how likely a frame belongs to a micro-expression. It outputs a spotting confidence score. Then score thresholding and peak detection are performed to obtain all micro-expression intervals in given video.
+
 ![arch](fig/step2.png)
 
 (3) Third, extract discriminative facial subtle muscle movement change feature from each spotted micro-expression subvideo. 
 
-we use a BERT-based Auto Encoder as a base model (https://github.com/uark-cviu/Micron-BERT) to capture these micro-changes of facial texture in an unsupervised manner.
+We use a BERT-based Auto Encoder as a base model (https://github.com/uark-cviu/Micron-BERT) to capture these micro-changes of facial texture in an unsupervised manner.
 
 It consists of five main blocks. 
 
-Two input frames(onset and apex) are first divided into a set of several non-overlapping patches, respectively.
+Two input frames (onset and apex) are first divided into a set of several non-overlapping patches, respectively.
 
 (a) patch-wise Swapping: randomly swap patches between onset and apex frames to create a swapped image.
 
@@ -56,12 +61,12 @@ Two input frames(onset and apex) are first divided into a set of several non-ove
 ![arch](fig/step3.png)
 
 The final feature (F_DMA) captures the micro-changes between apex and onset, and micro-changes in facial regions.
-It can be a discriminative feature of micro-expression.
+It can be a discriminative representation of a micro-expression movement.
 
 (4) Last, the final representation is fed into SVM for final classification.
 
 ### Link: 
-More details can be referred to my thesis(Section 4.4). 
+More details can be referred to my thesis (Section 4.4). 
 [[PDF]](https://researchrepository.wvu.edu/etd/11861/)
 
 
